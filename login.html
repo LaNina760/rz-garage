@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - RZ Garage</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="auth-body">
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-logo">
+          <img src="Foto/logo.png" alt="RZ Garage" />
+        </div>
+        <h2>Portal Login Pelanggan</h2>
+        <p>Silakan masuk untuk booking.</p>
+
+        <form action="#" class="auth-form">
+          <div class="form-group">
+            <label> Username</label>
+            <input type="text" placeholder="Masukkan Username Anda" required />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Masukkan password" required />
+          </div>
+
+          <button type="submit" class="btn-submit">Masuk</button>
+        </form>
+
+        <div class="auth-footer">
+          <a href="index.html"
+            ><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      {
+        const formLoginAktif =
+          document.querySelector(".auth-form") ||
+          document.querySelector("form");
+
+        if (formLoginAktif) {
+          formLoginAktif.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const inputs = formLoginAktif.querySelectorAll("input");
+            const usernameInput = inputs[0].value.trim();
+            const passwordInput = inputs[1].value.trim();
+
+            if (usernameInput === "admin" && passwordInput === "admin123") {
+              localStorage.setItem("namaUser", "Admin RZ");
+              alert("Login sukses sebagai Admin!");
+
+              window.location.href = "admin.html";
+            } else if (
+              usernameInput === "owner" &&
+              passwordInput === "owner123"
+            ) {
+              localStorage.setItem("namaUser", "Bos Owner");
+              alert("Login sukses sebagai Owner!");
+
+              window.location.href = "admin.html";
+            } else {
+              localStorage.setItem("namaUser", usernameInput);
+              alert("Login sukses!");
+
+              window.location.href = "pelanggan.html";
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,426 @@
+/* RESET*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: white;
+}
+
+/* NAVBAR*/
+
+.navbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 8%;
+
+  background: white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+}
+
+/* Burger */
+.menu-btn {
+  font-size: 24px;
+  color: black;
+
+  cursor: pointer;
+
+  display: none;
+}
+
+/* Logo */
+.logo img {
+  height: 55px;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  gap: 35px;
+
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: red;
+}
+
+/* HERO*/
+
+.hero {
+  margin-top: 90px;
+}
+
+/* Background */
+.hero-bg {
+  height: 75vh;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Foto/cvt.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 8%;
+}
+
+/* Text */
+.hero-text span {
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  max-width: 500px;
+
+  line-height: 1.8;
+
+  color: #ddd;
+}
+
+/* THUMBNAIL */
+
+.thumb-container {
+  display: flex;
+  gap: 15px;
+
+  padding: 20px 8%;
+
+  overflow-x: auto;
+
+  background: #000;
+}
+
+/* Card Thumbnail */
+.thumb {
+  min-width: 180px;
+  height: 110px;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border: 3px solid transparent;
+
+  transition: 0.3s;
+}
+
+/* Thumbnail Aktif */
+.thumb.active {
+  border-color: red;
+}
+
+/* Gambar Thumbnail */
+.thumb img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* SERVICES*/
+
+.services {
+  padding: 80px 8%;
+}
+
+/* Judul */
+.section-title {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+/* Wrapper */
+.service-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* Card */
+.service-card {
+  background: #1b1b1b;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+/* Atas Accordion */
+.service-top {
+  padding: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+/* Detail Accordion */
+.service-detail {
+  padding: 0 25px 25px;
+
+  color: #ccc;
+
+  display: none;
+}
+
+/* ABOUT*/
+
+.about {
+  padding: 80px 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+/* Gambar */
+.about-image img {
+  width: 100%;
+
+  border-radius: 20px;
+}
+
+/* Text */
+.about-text h2 {
+  font-size: 42px;
+
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.8;
+
+  margin-bottom: 15px;
+
+  color: #ccc;
+}
+
+/* FOOTER*/
+
+footer {
+  background: #c40014;
+
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 40px;
+
+  padding: 60px 8%;
+}
+
+/* LOGO*/
+
+.footer-logo img {
+  width: 180px;
+}
+
+/*QUICK LINKS*/
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-links h3 {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+/*CONTACT US*/
+
+.footer-contact h3 {
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/*COPYRIGHT PALING BAWAH*/
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-size: 14px;
+}
+
+/*RESPONSIVE TABLET*/
+
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 15px 6%;
+  }
+
+  /* Hero */
+  .hero-text h1 {
+    font-size: 45px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  /* About */
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*RESPONSIVE SMARTPHONE*/
+
+@media screen and (max-width: 480px) {
+  /* Burger muncul */
+  .menu-btn {
+    display: block;
+  }
+
+  /* Menu mobile */
+  .nav-menu {
+    position: absolute;
+
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    display: none;
+  }
+
+  /* Saat active */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* Item */
+  .nav-menu li {
+    border-top: 1px solid #ddd;
+  }
+
+  /* Link */
+  .nav-menu a {
+    display: block;
+
+    padding: 18px;
+
+    color: black;
+  }
+
+  /* Hero */
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  /* Thumbnail */
+  .thumb {
+    min-width: 150px;
+    height: 95px;
+  }
+
+  /* Section */
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESET */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}

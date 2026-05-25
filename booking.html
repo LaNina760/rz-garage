@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RZ Garage - Booking Service</title>
+    <link rel="stylesheet" href="booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="booking-section">
+      <div class="form-container">
+        <h2>Form Booking Service</h2>
+        <p>Silakan isi data kendaraan dan pilih jadwal operasional.</p>
+
+        <form id="bookingForm">
+          <div class="input-group">
+            <label
+              ><i class="fa-solid fa-motorcycle"></i> Nomor Polisi (Pelat
+              Motor)</label
+            >
+            <input
+              type="text"
+              placeholder="Contoh: K 1234 TF"
+              required
+              id="platNomor"
+            />
+          </div>
+
+          <div class="input-group">
+            <label><i class="fa-solid fa-wrench"></i> Jenis Layanan</label>
+            <select required id="jenisLayanan">
+              <option value="">-- Pilih Layanan --</option>
+              <option value="Service CVT">Service CVT</option>
+              <option value="Tune Up">Tune Up</option>
+              <option value="Ganti Oli">Ganti Oli</option>
+            </select>
+          </div>
+
+          <div class="input-group" id="menuOliContainer" style="display: none">
+            <label
+              ><i class="fa-solid fa-oil-can"></i> Pilih Jenis/Merek Oli</label
+            >
+            <select id="pilihanOli">
+              <option value="">-- Pilih Merek Oli --</option>
+              <option value="MPX 2 (Matic) - Rp 55.000">
+                MPX 2 (Matic) - Rp 55.000
+              </option>
+              <option value="SPX 2 (Synthetic Matic) - Rp 70.000">
+                SPX 2 (Synthetic Matic) - Rp 70.000
+              </option>
+              <option value="Shell Advance AX7 - Rp 65.000">
+                Shell Advance AX7 - Rp 65.000
+              </option>
+              <option value="Castrol Power1 - Rp 60.000">
+                Castrol Power1 - Rp 60.000
+              </option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label
+              ><i class="fa-solid fa-calendar-days"></i> Pilih Tanggal</label
+            >
+            <input type="date" required id="tanggalBooking" />
+          </div>
+
+          <div class="input-group">
+            <label><i class="fa-solid fa-clock"></i> Pilih Jam Sesi</label>
+            <select required id="jamBooking">
+              <option value="09:00">09:00 WIB</option>
+              <option value="11:00">11:00 WIB</option>
+              <option value="14:00">14:00 WIB</option>
+              <option value="16:00">16:00 WIB</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit-booking">
+            Konfirmasi Booking
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Pelanggan - RZ Garage</title>
+    <link rel="stylesheet" href="booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      .status-badge {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .status-proses {
+        background: #ff9800;
+        color: #fff;
+      }
+      .status-selesai {
+        background: #4caf50;
+        color: #fff;
+      }
+      .info-box {
+        background: #252525;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-left: 4px solid #c40014;
+      }
+    </style>
+  </head>
+  <body class="auth-body">
+    <div class="booking-container">
+      <div class="booking-card">
+        <h2><i class="fa-solid fa-gauge-high"></i> Dashboard Pelanggan</h2>
+        <p>
+          Halo, <strong id="nama-panggilan">Rakha Matic</strong>! Pantau status
+          servis motormu di sini.
+        </p>
+        <hr class="form-divider" />
+
+        <div class="info-box">
+          <h4 style="color: #fff; margin-bottom: 5px">Status Servis Aktif:</h4>
+          <p style="text-align: left; color: #ddd; margin-bottom: 0">
+            Motor: <strong>Vario 150 (B 1234 RZ)</strong> <br />
+            Layanan: Service Ringan + Ganti Oli <br />
+            Status:
+            <span class="status-badge status-proses">Sedang Dikerjakan</span>
+          </p>
+        </div>
+
+        <h3 style="color: #fff; margin-bottom: 15px; font-size: 18px">
+          Riwayat Servis & Nota
+        </h3>
+        <div style="overflow-x: auto">
+          <table
+            style="
+              width: 100%;
+              border-collapse: collapse;
+              color: #fff;
+              font-size: 14px;
+            "
+          >
+            <thead>
+              <tr style="background: #252525; text-align: left">
+                <th style="padding: 12px; border-bottom: 2px solid #333">
+                  Tanggal
+                </th>
+                <th style="padding: 12px; border-bottom: 2px solid #333">
+                  Motor
+                </th>
+                <th style="padding: 12px; border-bottom: 2px solid #333">
+                  Layanan
+                </th>
+                <th style="padding: 12px; border-bottom: 2px solid #333">
+                  Total Biaya
+                </th>
+                <th style="padding: 12px; border-bottom: 2px solid #333">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #333">
+                <td style="padding: 12px">20/05/2026</td>
+                <td style="padding: 12px">Vario 150</td>
+                <td style="padding: 12px">Ganti Ban Belakang</td>
+                <td style="padding: 12px; color: #4caf50">Rp 350.000</td>
+                <td style="padding: 12px">
+                  <span class="status-badge status-selesai">Selesai</span>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid #333">
+                <td style="padding: 12px">10/04/2026</td>
+                <td style="padding: 12px">Vario 150</td>
+                <td style="padding: 12px">CVT Kelistrikan</td>
+                <td style="padding: 12px; color: #4caf50">Rp 210.000</td>
+                <td style="padding: 12px">
+                  <span class="status-badge status-selesai">Selesai</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="auth-footer">
+          <a href="index.html"
+            ><i class="fa-solid fa-arrow-left"></i> Keluar / Kembali ke
+            Beranda</a
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      const namaYangDisimpan = localStorage.getItem("namaLogin");
+
+      if (namaYangDisimpan) {
+        document.getElementById("nama-user").innerText = namaYangDisimpan;
+      }
+    </script>
+
+    <script>
+      const namaLogin = localStorage.getItem("namaUser");
+
+      if (namaLogin) {
+        document.getElementById("nama-panggilan").innerText = namaLogin;
+      }
+    </script>
+  </body>
+</html>

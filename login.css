@@ -1,0 +1,125 @@
+/*  CSS KHUSUS HALAMAN LOGIN (login.css)*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.auth-body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card {
+  background: #1b1b1b;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.auth-logo img {
+  height: 60px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.auth-card p {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Form Input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #c40014;
+}
+
+/* Tombol Login */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: #c40014;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: #b00012;
+  box-shadow: 0 5px 15px rgba(196, 0, 20, 0.4);
+}
+
+/* Tombol Kembali */
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.auth-footer a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.auth-footer a:hover {
+  color: #c40014;
+}
